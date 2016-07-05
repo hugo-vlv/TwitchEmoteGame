@@ -1,0 +1,9 @@
+@font-face {
+    font-family: twitch;
+    src: url(twitch.ttf);
+}
+
+#headermp {
+  font-family: twitch;
+  color: black;
+}
