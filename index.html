@@ -2,17 +2,24 @@
   <title>Twitch Emote Game</title>
   <link rel="icon" type="image/png" href="RES/image/favicon.png">
 
+  <!-- stylesheet -->
+  <link href="CSS\font-awesome-4.6.3\css\font-awesome.min.css" rel="stylesheet" />
   <link href="CSS\bootstrap.min.css" rel="stylesheet" />
+  <link href="CSS\animate.css" rel="stylesheet" />
   <link href="CSS\global.css" rel="stylesheet" />
   <link href="CSS\main-content.css" rel="stylesheet" />
 
   <script src="JS\jquery-2.2.4.min.js"></script>
-  <script src="JS\bootstrap.min.js"></script>
   <script src="JS\angular.min.js"></script>
-</head>
-<body>
+  <script src="JS\angular-animate.js"></script>
+  <script src="JS\bootstrap.min.js"></script>
+  <script src="JS\main.js"></script>
+  <script src="JS\load_emotes.js"></script>
 
-  <nav class="navbar-fixed">
+</head>
+<body ng-app="twitchEmoteGame">
+
+  <nav class="navbar navbar-fixed-top navbar-teg">
     <div class="container center-block" id="banner_title">
       <h1 id="headermp" class="text-center">twitch emote game</h1>
     </div>
@@ -21,20 +28,37 @@
   <div class="main-content">
     <div class="container-fluid">
 
-      <div class="col-md-3">
+      <div id="teg-toolbar" class="col-md-3">
         <div class="panel panel-default twitchmodule">
-          <div class="panel-body text-center">
-            <h4>Play</h4>
+          <div class="panel-body text-center" ng-controller="MenuController as menu">
+            <h4 ng-click="menu.showGame()">Play <i id="play-logo" class="animated infinite wobble fa fa-arrow-left" aria-hidden="true"></i></h4>
             <hr>
-            <h4>About</h4>
+            <h4 ng-click="menu.showAbout()">About <i id="about-logo" class="animated infinite tada fa fa-info-circle" aria-hidden="true"></i></h4>
           </div>
         </div>
       </div>
 
       <div class="col-md-9">
-        <div class="panel panel-default twitchmodule">
-          <div class="panel-body text-center">
-            <h3 class="remote-header twitch-panel">2</h3>
+        <div id="teg-game" class="panel panel-default twitchmodule">
+          <div class="panel-body" ng-controller="GameController as game">
+
+            <div id="welcome-content">
+              <h1>Welcome !</h1><hr/>
+              <h2>Twitch Emotes based game in which you need to display your twitch knowledge (emote related) in a serie of 20 randomly picked global emotes.</h2><hr/>
+              <h3><b>Rules:</b><br>each frame will contain the emote icon and an input bar, send your answer or skip. Score will be given the serie being finished.<br>Good Luck !</h3>
+            </div>
+
+            <div id="game-content" style="display:none;">
+              <h1>In Construction</h2>
+            </div>
+
+            <div id="about-content" style="display:none;">
+              <h1>&nbsp&nbsp&nbsp<i class="fa fa-info" aria-hidden="true"></i>&nbsp&nbspAbout</h1><hr/>
+              <h2>&nbsp&nbsp&nbsp<i class="fa fa-heart" aria-hidden="true"></i> made by a twitch fan, for twitch fans :D</h2><hr/>
+              <h3>&nbsp&nbsp&nbsp&nbsp<i class="fa fa-envelope" aria-hidden="true"></i> &nbsphugo.villevieille@epitech.eu</h3><br>
+              &nbsp&nbsp<img src="RES\image\twitch-kappa.jpg" height="100" width="100" class="img-responsive"/>
+            </div>
+
           </div>
         </div>
       </div>

@@ -3,7 +3,14 @@
     src: url(twitch.ttf);
 }
 
+@font-face {
+    font-family: maincontent;
+    src: url(LemonMilk.otf);
+}
+
 #headermp {
   font-family: twitch;
   color: black;
 }
+
+/* Angular Animations */
