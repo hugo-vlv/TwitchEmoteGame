@@ -1,2 +1,0 @@
--static elements (panels).
--enter key to next frame.
