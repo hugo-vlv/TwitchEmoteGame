@@ -1,11 +1,11 @@
 @font-face {
-    font-family: twitch;
-    src: url(twitch.ttf);
+  font-family: twitch;
+  src: url(twitch.ttf);
 }
 
 @font-face {
-    font-family: maincontent;
-    src: url(LemonMilk.otf);
+  font-family: maincontent;
+  src: url(LemonMilk.otf);
 }
 
 #headermp {
@@ -13,4 +13,63 @@
   color: black;
 }
 
-/* Angular Animations */
+a {
+  color: black;
+}
+
+a:focus, a:hover {
+  color:black;
+  text-decoration:none;
+}
+
+button.btn.btn-success.btn-lg.start {
+  margin-bottom: 50px;
+  font-size: 50px;
+  height: 150px;
+  width:300px;
+}
+
+.skip-button {
+  font-size: 25px;
+  height: 75px;
+  width: 150px;
+}
+
+.answer-box {
+  padding-top: 100px;
+}
+
+.answer-text {
+  margin-top: 0px;
+}
+
+.frame-count {
+  padding-left: 20px;
+}
+
+.score-summary {
+  padding-top: 50px;
+}
+
+.score-header {
+  padding-top: 20px;
+  padding-bottom:25px;
+}
+
+.submit-answer.ng-dirty.ng-empty {
+  border-color: #d9534f;
+}
+
+.submit-answer.ng-dirty.ng-not-empty {
+  border-color: #449d44;
+}
+
+.submit-answer {
+  height: 75px;
+  width: 150px;
+  font-size: 25px;
+}
+
+.emote-img-game {
+  padding-top: 40px;
+}

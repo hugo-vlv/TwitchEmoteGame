@@ -1,5 +1,5 @@
 .main-content {
-  height:100%;
+  min-height:100%;
   background-color: #6441A5;
   padding-top: 100px;
 }
